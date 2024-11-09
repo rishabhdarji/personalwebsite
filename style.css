@@ -240,6 +240,12 @@ html,body{
     margin-top: 10px;
 }
 
+#subscribe a {
+    color: white; /* Sets the link color to white */
+    text-decoration: none; /* Removes underline from link */
+}
+
+
 #footer{
     text-transform: uppercase;
     display: flex;
