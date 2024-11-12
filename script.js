@@ -102,3 +102,12 @@ document.querySelectorAll(".elem").forEach(function(elem){
         })
     });
 });
+
+
+// Toggle navigation menu on small screens
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector("#nav");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});

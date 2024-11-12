@@ -32,7 +32,7 @@ html,body{
    background-color: black;
 }
 
-#hero{
+/* #hero{
     position: relative;
     width: 100%;
     height: 100vh;
@@ -134,7 +134,122 @@ html,body{
     height: 25px;
     border-radius: 50%;
     background-color: #888;
+} */
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
 }
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 40px;
+    align-items: center;
+}
+
+#nav a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#nav h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: white;
+}
+
+#menu-toggle {
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+#heading h1 {
+    margin: 0;
+    font-size: 8vw; /* Adjust for responsive scaling */
+    opacity: 0.8;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+}
+
+#heading #secondh1 {
+    margin-left: 0;
+    color: white;
+}
+
+.blocktext h5 {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+#smallheading {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#smallheading h5 {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+#herofooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#herofooter a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+#herofooter #seticon {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+#herofooter .circle {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #888;
+    border-radius: 50%;
+}
+
 
 #second{
     color: white;
@@ -280,6 +395,154 @@ html,body{
     color: white;
 }
 
-@media (max-width:1210px) {
-    
-}
+/* Mobile responsiveness for screens up to 768px */
+@media (max-width: 768px) {
+    #nav {
+      padding: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    #nav a, #nav h4 {
+      font-size: 16px;
+    }
+  
+    #heading h1 {
+      font-size: 8vw;
+      margin-left: 10px;
+    }
+  
+    #heading #secondh1 {
+      margin-left: 0;
+    }
+  
+    .blocktext {
+      align-items: start;
+    }
+  
+    #smallheading {
+      padding-right: 10px;
+      align-items: start;
+      text-align: left;
+    }
+  
+    #herofooter {
+      padding: 0 20px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    #second {
+      padding-top: 100px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  
+    .elem {
+      flex-direction: column;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    .elem h1 {
+      font-size: 6vw;
+    }
+  
+    #about {
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+    }
+  
+    #about img {
+      width: 150px;
+    }
+  
+    .textabout {
+      width: 100%;
+      font-size: 1rem;
+    }
+  
+    #subscribe h3 {
+      font-size: 1rem;
+    }
+  
+    #footer {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    #footerleft, #footerright {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    #footerright a {
+      font-size: 14px;
+    }
+  }
+
+  /* Extra small screens up to 480px */
+@media (max-width: 480px) {
+    #nav a, #nav h4 {
+      font-size: 14px;
+    }
+  
+    #heading h1 {
+      font-size: 10vw;
+    }
+  
+    .blocktext h5, #smallheading h5 {
+      font-size: 3vw;
+    }
+  
+    .textabout p {
+      font-size: 0.875rem;
+    }
+  
+    #footerleft h5, #footerright a {
+      font-size: 12px;
+    }
+  }
+  
+
+  /* Image adjustments for mobile */
+.elem img, #about img {
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+@media (max-width: 480px) {
+    #herofooter #seticon, .circle, .elem img {
+      display: none;
+    }
+  }
+  
+
+  /* Toggleable menu styles */
+#menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    #menu-toggle {
+      display: block;
+    }
+  
+    #nav.show {
+      display: block;
+    }
+  
+    #nav a {
+      display: block;
+      padding: 10px 0;
+    }
+  }
+  
